@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Chrome extension identity",
+    "version": "0.06",
+    "description": "Demo of identifying and authorizing a user",
+    "permissions": [
+        "identity",
+        "identity.email"
+    ],
+    "action": {
+        "default_title": "popup.html",
+        "default_popup": "./popup.html"
+    },
+    "oauth2": {
+        "client_id": "733769446608-jbr6psgi8aep3iqcng7qhp34180duu7p.apps.googleusercontent.com",
+        "scopes": ["https://www.googleapis.com/auth/userinfo.email"]
+    }
+}
