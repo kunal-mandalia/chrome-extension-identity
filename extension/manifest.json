@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Chrome extension identity",
-    "version": "0.35",
+    "version": "0.37",
     "description": "Demo of identifying and authorizing a user",
     "permissions": [
         "identity",
