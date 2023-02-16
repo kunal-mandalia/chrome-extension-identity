@@ -1,5 +1,14 @@
 # Chrome extension identity
 
+Demo of a simple auth flow:
+```
+Chrome extension (chrome.identity)
+    -> Server
+        -> Google (OAuth2)
+    <- Server
+<- Chrome extension
+```
+
 ![Screenshot](docs/screenshot.png)
 
 ## Getting started
