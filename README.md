@@ -1,6 +1,6 @@
 # Chrome extension identity
 
-Demo of a simple auth flow:
+Demo of a simple auth flow starting from a Chrome extension to verifying identity with Google securely via a web server:
 ```
 Chrome extension (chrome.identity)
     -> Server
