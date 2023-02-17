@@ -41,6 +41,27 @@ async function getPublicAPI() {
     return j;
 }
 
+async function googleAPI() {
+    const { token } = await getAuthToken();
+    const requestURL = "https://www.googleapis.com/drive/v3/files";
+    const requestHeaders = new Headers();
+    requestHeaders.append('Authorization', 'Bearer ' + token);
+    const driveRequest = new Request(requestURL, {
+      method: "GET",
+      headers: requestHeaders
+    });
+  
+    const res = await fetch(driveRequest).then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else {
+        throw response.status;
+      }
+    });
+    writeOutput(res);
+    return res;
+  }
+
 function main() {
     const btnGetProfile = document.getElementById("btn-get-profile");
     btnGetProfile.addEventListener('click', getProfileUserInfo);
@@ -53,6 +74,9 @@ function main() {
 
     const btnPublic = document.getElementById("btn-public");
     btnPublic.addEventListener('click', getPublicAPI);
+
+    const btnGoogleAPI = document.getElementById("btn-google-api");
+    btnGoogleAPI.addEventListener('click', googleAPI);
 }
 
 main();
