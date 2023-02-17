@@ -1,14 +1,15 @@
 {
     "manifest_version": 3,
     "name": "Chrome extension identity",
-    "version": "0.37",
+    "version": "0.39",
     "description": "Demo of identifying and authorizing a user",
     "permissions": [
         "identity",
         "identity.email"
     ],
     "host_permissions": [
-        "http://localhost:8080/*"
+        "http://localhost:8080/*",
+        "https://www.googleapis.com/oauth2/*"
     ],
     "action": {
         "default_title": "popup.html",
@@ -18,6 +19,7 @@
         "client_id": "733769446608-jbr6psgi8aep3iqcng7qhp34180duu7p.apps.googleusercontent.com",
         "scopes": [
             "https://www.googleapis.com/auth/userinfo.email",
+            "https://www.googleapis.com/auth/drive.readonly",
             "openid"
         ]
     },
